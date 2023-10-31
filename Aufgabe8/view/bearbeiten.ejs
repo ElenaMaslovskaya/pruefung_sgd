@@ -1,0 +1,24 @@
+<%- include("kopf") %>
+    <h1>Eintrag <%= daten.id %> bearbeiten</h1>
+    <form action="/bearbeiten/<%= daten.id %>" method="post">
+        <label for="firstname">Vorname:</label><br>
+        <input type="text" id="firstname" name="firstname" value="<%=daten.firstname %>" required><br><br>
+    
+        <label for="lastname">Nachname:</label><br>
+        <input type="text" id="lastname" name="lastname" value="<%=daten.lastname %>" required><br><br>
+    
+        <label for="street">Straße:</label><br>
+        <input type="text" id="street" name="street" value="<%=daten.street %>" required><br><br>
+    
+        <label for="houseNumber">Hausnummer:</label><br>
+        <input type="text" id="houseNumber" name="houseNumber" value="<%=daten.houseNumber %>" required><br><br>
+    
+        <label for="postalCode">Postleitzahl:</label><br>
+        <input type="text" id="postalCode" name="postalCode" value="<%=daten.postalCode %>" required><br><br>
+    
+        <label for="city">Stadt:</label><br>
+        <input type="text" id="city" name="city" value="<%=daten.city %>" required><br><br>
+    
+        <button type="submit">Kontakt bearbeiten</button>
+    </form>
+<%- include("fuss") %>

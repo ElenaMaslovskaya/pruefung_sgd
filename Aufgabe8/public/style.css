@@ -1,0 +1,26 @@
+body {
+    width: 100%;
+    padding-left: 5em;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h1 {
+    font-size: 300%;
+}
+
+table {
+    border: 1px solid #000;
+}
+
+th {
+    height: 20px;
+    padding: 10px 30px;
+}
+
+tr {
+    text-align: center;
+}
+
+td {
+    padding: 0 10px;
+}

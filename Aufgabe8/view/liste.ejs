@@ -1,0 +1,39 @@
+<%- include("kopf") %>
+    <h1>Meine Kontakte</h1>
+    <h2>Einträge: <%= daten.length %></h2>
+    <div>
+        <table>
+            <thead>
+            <tr>
+                <th>Vorname</th>
+                <th>Nachname</th>
+                <th>Adresse</th>
+                <th><a href="/neu">Neu</a></th>
+            </tr>
+            </thead>
+            <tbody>
+            <% for (let contact of daten) { %>
+                <tr>
+                    <td>
+                        <%= contact.firstname %>
+                    </td>
+                    <td>
+                        <%= contact.lastname %>
+                    </td>
+                    <td>
+                        <% if (contact.street && contact.houseNumber && contact.postalCode && contact.city) { %>
+                            <%= contact.street %>
+                                <%= contact.houseNumber %>,<br>
+                                    <%= contact.postalCode %>
+                                        <%= contact.city %>
+                                            <% } %>
+                    </td>
+                    <td><a href="/bearbeiten/<%= contact.id %>">Bearbeiten</a>
+                        <a href="/loeschen/<%= contact.id %>">Löschen</a>
+                    </td>
+                </tr>
+                <% }; %>
+                </tbody>
+        </table>
+    </div>
+<%- include("fuss") %>
